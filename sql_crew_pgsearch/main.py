@@ -4,15 +4,8 @@ from crewai import Crew
 from textwrap import dedent
 from agents import SQLAgents
 from tasks import SQLTasks
-from crewai.knowledge.source.string_knowledge_source import StringKnowledgeSource
 
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
-
-# Create knowledge source
-directions = "You will NOT include triple backticks (```) in any of your inputs or outputs."
-direction_source = StringKnowledgeSource(
-    content=directions,
-)
 
 class CustomCrew:
     def __init__(self, user_question):
@@ -33,12 +26,8 @@ class CustomCrew:
             schema_agent
         )
 
-        generate_sql_script_task = tasks.generate_sql_script_task(
+        retrieve_pg_data_task = tasks.retrieve_pg_data_task(
             sql_agent, user_question=self.user_question
-        )
-
-        execute_sql_script_task = tasks.execute_sql_script_task(
-            sql_agent
         )
 
         generate_insights_task = tasks.generate_insights_task(
@@ -48,9 +37,8 @@ class CustomCrew:
         # Define your custom crew here
         crew = Crew(
             agents=[schema_agent, sql_agent, interpreter_agent],
-            tasks=[fetch_schema_task, generate_sql_script_task, execute_sql_script_task, generate_insights_task],
+            tasks=[fetch_schema_task, retrieve_pg_data_task, generate_insights_task],
             verbose=True,
-            knowledge_sources=[direction_source],
         )
 
         result = crew.kickoff()

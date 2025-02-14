@@ -2,8 +2,7 @@ from crewai import Agent
 from textwrap import dedent
 from langchain_openai import ChatOpenAI
 from SchemaTool import get_schema
-from QueryTool import execute_query
-from DateTool import get_date_time
+from QueryTool import pg_search_tool
 
 
 class SQLAgents:
@@ -30,12 +29,11 @@ class SQLAgents:
 
     def sql_agent(self):
         return Agent(
-            role="SQL Script Engineer",
-            backstory=dedent(f"""You have spent your career writing and running the most cutting edge and accurate SQL
-            scripts. You can write and run a SQL script to answer any question."""),
-            goal=dedent(f"""Your goal is to turn natural language business questions into executable SQL scripts. You 
-            will also run these scripts."""),
-            tools=[execute_query, get_date_time],
+            role="PostgreSQL Database Engineer",
+            backstory=dedent(f"""You have spent you entire career quickly and efficiently retrieving data from postgres
+            databases. You can answer any question."""),
+            goal=dedent(f"""Your goal is to answer natural language questions with data from PostgreSQL databases."""),
+            tools=[pg_search_tool],
             allow_delegation=False,
             verbose=True,
             llm=self.OpenAIGPT4o,

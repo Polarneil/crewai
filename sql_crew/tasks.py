@@ -31,11 +31,20 @@ class SQLTasks:
                 The SQL script should be executable against the database and fit with the schema. This script should be 
                 created with the users question in mind. The data returned from this executable SQL script should be 
                 answer the user's question.
+                
+                Note: timestamp fields must be querired like this (example):
+                
+                SELECT * FROM api_visitorlog 
+                WHERE timestamp::text LIKE '2025-01-21%';
+                
+                Note: If a user enters a question related to the current date (ex. "show me data from the past week"),
+                utilize the `get_date_time` tool function.
                                                 
                 User question: {user_question}
                 """
             ),
-            expected_output="The expected output of this task is a SQL script in string format to pass into a function.",
+            expected_output="""The expected output of this task is a SQL script in string format to pass into a 
+            function. There should be no triple back ticks in your output""",
             agent=agent,
         )
 
