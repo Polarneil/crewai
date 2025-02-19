@@ -1,41 +1,20 @@
-# To know more about the Task class, visit: https://docs.crewai.com/concepts/tasks
 from crewai import Task
 from textwrap import dedent
 
 
-class CustomTasks:
-    def __tip_section(self):
-        return "If you do your BEST WORK, I'll give you a $10,000 commission!"
-
-    def task_1_name(self, agent, var1, var2):
+class GCPTasks:
+    def analyze_warehouse_task(self, agent):
         return Task(
             description=dedent(
                 f"""
-            Do something as part of task 1
-
-            {self.__tip_section()}
-
-            Make sure to use the most recent data as possible.
-
-            Use this variable: {var1}
-            And also this variable: {var2}
-        """
+                Your task is to collect and metdata in a metadata catalog from Google Cloud's BigQuery using the
+                `BigQuery Metadata Tool`. This tool returns table and field metadata that will be useful in your
+                creation of a metadata catalog.
+                
+                You will use the `catalog_example_knowledge` as an example of how to format a metadata catalog.    
+                """
             ),
-            expected_output="The expected output of the task",
-            agent=agent,
-        )
-
-    def task_2_name(self, agent):
-        return Task(
-            description=dedent(
-                f"""
-            Take the input from task 1 and do something with it.
-
-            {self.__tip_section()}
-
-            Make sure to do something else.
-        """
-            ),
-            expected_output="The expected output of the task",
+            expected_output="The expected output of the task is a metadata catalog.",
+            output_file="metadata_catalog.json",
             agent=agent,
         )

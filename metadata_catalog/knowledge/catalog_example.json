@@ -8,6 +8,7 @@
       "name": "customers",
       "schema": "public",
       "description": "Table containing customer information.",
+      "row_count": "50000",
       "owner": "data_governance@example.com",
       "created_at": "2024-10-27T10:00:00Z",
       "updated_at": "2024-10-27T12:00:00Z",

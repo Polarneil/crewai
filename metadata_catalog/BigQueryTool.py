@@ -1,28 +1,34 @@
 from google.cloud import bigquery
-from dotenv import load_dotenv
-import json
-import os
-
-load_dotenv()
-
-gcp_project = os.getenv("GCP_PROJECT_DEMO")
-gcp_dataset = os.getenv("GCP_DATASET_DEMO")
-gcp_table = os.getenv("GCP_TABLE_DEMO")
+from langchain_community.tools import tool
 
 
-# Add the tool decorator and pass into the first Agent
+# @tool("BigQuery Metadata Tool")
 class BigQueryMetadataCatalogTool:
-    def __init__(self, project_id, dataset_id, table_id):
-        self.project_id = project_id
-        self.dataset_id = dataset_id
-        self.table_id = table_id
+    """ Useful for retrieving BigQuery metadata from Google Cloud """
+    def __init__(self, gcp_project, gcp_dataset, gcp_table):
+        self.project_id = gcp_project
+        self.dataset_id = gcp_dataset
+        self.table_id = gcp_table
         self.client = bigquery.Client()
 
     def get_table_metadata(self):
         table_ref = f"{self.project_id}.{self.dataset_id}.{self.table_id}"
         table = self.client.get_table(table_ref)
 
-        schema_info = []  # Store schema information here
+        table_metadata = {
+            "table_id": table.table_id,
+            "table_type": table.table_type,
+            "full_table_id": table.full_table_id,
+            "dataset_id": table.dataset_id,
+            "description": table.description,
+            "num_rows": table.num_rows,
+            "created": str(table.created),
+            "modified": str(table.modified),
+            "expires": str(table.expires),
+            "path": table.path,
+        }
+
+        field_metadata = []  # Store schema information here
 
         for schema_field in table.schema:
             field_info = {
@@ -35,16 +41,16 @@ class BigQueryMetadataCatalogTool:
                 field_info["Description"] = schema_field.description
 
             if schema_field.fields:
-                field_info["Fields"] = self.get_nested_fields(schema_field) # Use self here, not classname
+                field_info["Fields"] = self.get_nested_fields(schema_field)
 
             if schema_field.precision is not None:
                 field_info["Precision"] = schema_field.precision
             if schema_field.scale is not None:
                 field_info["Scale"] = schema_field.scale
 
-            schema_info.append(field_info)  # Add field info to the list
+            field_metadata.append(field_info)  # Add field info to the list
 
-        return schema_info  # Return the list of dictionaries
+        return table_metadata, field_metadata  # Return the list of dictionaries
 
     def get_nested_fields(self, schema_field):
 
@@ -69,10 +75,3 @@ class BigQueryMetadataCatalogTool:
 
             nested_fields_list.append(nested_info)
         return nested_fields_list
-
-
-tooler = BigQueryMetadataCatalogTool(gcp_project, gcp_dataset, gcp_table)
-
-metadata = tooler.get_table_metadata()  # Get the returned metadata
-
-print(json.dumps(metadata, indent=4))
