@@ -1,0 +1,7 @@
+{
+    "catalog_name": "MyDataCatalog",
+    "description": "A sample metadata catalog for a data warehouse.",
+    "version": "1.0",
+    "change_summary": {},
+    "data_assets": []
+}

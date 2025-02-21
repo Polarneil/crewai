@@ -10,6 +10,7 @@ class SQLAgents:
     def __init__(self):
         self.OpenAIGPT35 = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0.7)
         self.OpenAIGPT4o = ChatOpenAI(model_name="gpt-4o", temperature=0.7)
+        self.OpenAIGPT4omini = ChatOpenAI(model_name="gpt-4o-mini", temperature=0.7)
         self.Ollama = ChatOpenAI(
             model="ollama/llama3.1:8b",
             base_url="http://localhost:11434"
@@ -25,7 +26,7 @@ class SQLAgents:
             tools=[get_schema],
             allow_delegation=False,
             verbose=True,
-            llm=self.OpenAIGPT4o,
+            llm=self.OpenAIGPT4omini,
         )
 
     def sql_agent(self):
@@ -38,7 +39,7 @@ class SQLAgents:
             tools=[execute_query, get_date_time],
             allow_delegation=False,
             verbose=True,
-            llm=self.OpenAIGPT4o,
+            llm=self.OpenAIGPT4omini,
         )
 
     def interpreter_agent(self):
@@ -49,5 +50,5 @@ class SQLAgents:
             the users question"""),
             allow_delegation=False,
             verbos=True,
-            llm=self.OpenAIGPT4o,
+            llm=self.OpenAIGPT4omini,
         )
