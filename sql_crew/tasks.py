@@ -4,39 +4,19 @@ from textwrap import dedent
 
 class SQLTasks:
 
-    def fetch_schema_task(self, agent):
-        return Task(
-            description=dedent(
-                f"""
-                Your task is to analyze a databases schema and return the details for a SQL Agent to leverage.
-                
-                The SQL agent's job is to turn natural language questions about the database into a SQL query and the 
-                agent will need a detailed schema report to do this.
-                
-                Your job is to return a report of the schema to enable the SQL agent. You will utilize the help of tools
-                I give you to run queries against the database and retrieve schema information.
-                """
-            ),
-            expected_output="You will return a list of json objects just as the query returns to you.",
-            agent=agent,
-        )
-
     def generate_sql_script_task(self, agent, user_question):
         return Task(
             description=dedent(
                 f"""
                 Your task is to generate a SQL script based on the user's input question. You will leverage the schema
-                returned from the schema agent.
+                to formulate this query. You will utilize the `MetadataSchemaTool`, calling the `get_schema` function
+                 and passing in the file path '../metadata_catalog/catalog_outputs/metadata_catalog.json' to get the
+                 schema.
                 
                 The SQL script should be executable against the database and fit with the schema. This script should be 
                 created with the users question in mind. The data returned from this executable SQL script should be 
                 answer the user's question.
-                
-                Note: timestamp fields must be querired like this (example):
-                
-                SELECT * FROM api_visitorlog 
-                WHERE timestamp::text LIKE '2025-01-21%';
-                
+                                
                 Note: If a user enters a question related to the current date (ex. "show me data from the past week"),
                 utilize the `get_date_time` tool function.
                                                 

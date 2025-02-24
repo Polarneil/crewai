@@ -1,8 +1,10 @@
 from crewai import Agent
 from textwrap import dedent
 from langchain_openai import ChatOpenAI
-from SchemaTool import get_schema
-from QueryTool import execute_query
+# from SchemaTool import get_schema
+# from QueryTool import execute_query
+from MetadataSchemaTool import get_schema
+from MetadataQueryTool import execute_query
 from DateTool import get_date_time
 
 
@@ -16,19 +18,6 @@ class SQLAgents:
             base_url="http://localhost:11434"
         )
 
-    def schema_agent(self):
-        return Agent(
-            role="Database Schema Analyst",
-            backstory=dedent(f"""
-            You have been a Database Schema Analyst your entire life. You generate database schema reports constantly.
-            """),
-            goal=dedent(f"""Your goal will to return schema details from a database."""),
-            tools=[get_schema],
-            allow_delegation=False,
-            verbose=True,
-            llm=self.OpenAIGPT4omini,
-        )
-
     def sql_agent(self):
         return Agent(
             role="SQL Script Engineer",
@@ -36,7 +25,7 @@ class SQLAgents:
             scripts. You can write and run a SQL script to answer any question."""),
             goal=dedent(f"""Your goal is to turn natural language business questions into executable SQL scripts. You 
             will also run these scripts."""),
-            tools=[execute_query, get_date_time],
+            tools=[get_schema, execute_query, get_date_time],
             allow_delegation=False,
             verbose=True,
             llm=self.OpenAIGPT4omini,

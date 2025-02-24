@@ -14,6 +14,7 @@ direction_source = StringKnowledgeSource(
     content=directions,
 )
 
+
 class CustomCrew:
     def __init__(self, user_question):
         self.user_question = user_question
@@ -24,15 +25,10 @@ class CustomCrew:
         tasks = SQLTasks()
 
         # Define your custom agents and tasks here
-        schema_agent = agents.schema_agent()
         sql_agent = agents.sql_agent()
         interpreter_agent = agents.interpreter_agent()
 
         # Custom tasks include agent name and variables as input
-        fetch_schema_task = tasks.fetch_schema_task(
-            schema_agent
-        )
-
         generate_sql_script_task = tasks.generate_sql_script_task(
             sql_agent, user_question=self.user_question
         )
@@ -47,8 +43,8 @@ class CustomCrew:
 
         # Define your custom crew here
         crew = Crew(
-            agents=[schema_agent, sql_agent, interpreter_agent],
-            tasks=[fetch_schema_task, generate_sql_script_task, execute_sql_script_task, generate_insights_task],
+            agents=[sql_agent, interpreter_agent],
+            tasks=[generate_sql_script_task, execute_sql_script_task, generate_insights_task],
             verbose=True,
             knowledge_sources=[direction_source],
         )
