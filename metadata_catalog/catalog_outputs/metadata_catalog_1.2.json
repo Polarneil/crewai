@@ -1,0 +1,3561 @@
+{
+    "catalog_name": "MyDataCatalog",
+    "description": "A sample metadata catalog for a data warehouse.",
+    "version": "1.2",
+    "change_summary": {
+        "datasets_added": 0,
+        "datasets_updated": 0,
+        "datasets_skipped": 1,
+        "tables_added": 1,
+        "tables_updated": 0,
+        "tables_skipped": 1
+    },
+    "data_assets": [
+        {
+            "dataset_id": "google_analytics_sample",
+            "description": "Obfuscated Google Analytics 360 data. It\u2019s a great way to look at business data and experiment and learn the benefits of analyzing Google Analytics 360 data in BigQuery. Learn more at: https://support.google.com/analytics/answer/7586738",
+            "data_location": "US",
+            "created": "2018-01-17 22:47:45.286000+00:00",
+            "modified": "2022-09-20 07:43:48.910000+00:00",
+            "path": "/projects/bigquery-public-data/datasets/google_analytics_sample",
+            "data_assets": [
+                {
+                    "asset_type": "TABLE",
+                    "table_id": "ga_sessions_20170801",
+                    "full_table_id": "bigquery-public-data:google_analytics_sample.ga_sessions_20170801",
+                    "dataset_id": "google_analytics_sample",
+                    "description": "Obfuscated Google Analytics 360 data. It\u2019s a great way to look at business data and experiment and learn the benefits of analyzing Google Analytics 360 data in BigQuery. Learn more at: https://support.google.com/analytics/answer/7586738",
+                    "num_rows": 2556,
+                    "created": "2018-03-31 01:05:32.134000+00:00",
+                    "modified": "2019-09-19 17:59:54.764000+00:00",
+                    "expires": "None",
+                    "path": "/projects/bigquery-public-data/datasets/google_analytics_sample/tables/ga_sessions_20170801",
+                    "columns": [
+                        {
+                            "Name": "visitorId",
+                            "Type": "INTEGER",
+                            "Mode": "NULLABLE"
+                        },
+                        {
+                            "Name": "visitNumber",
+                            "Type": "INTEGER",
+                            "Mode": "NULLABLE"
+                        },
+                        {
+                            "Name": "visitId",
+                            "Type": "INTEGER",
+                            "Mode": "NULLABLE"
+                        },
+                        {
+                            "Name": "visitStartTime",
+                            "Type": "INTEGER",
+                            "Mode": "NULLABLE"
+                        },
+                        {
+                            "Name": "date",
+                            "Type": "STRING",
+                            "Mode": "NULLABLE"
+                        },
+                        {
+                            "Name": "totals",
+                            "Type": "RECORD",
+                            "Mode": "NULLABLE",
+                            "Fields": [
+                                {
+                                    "Name": "visits",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "hits",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "pageviews",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "timeOnSite",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "bounces",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "transactions",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "transactionRevenue",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "newVisits",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "screenviews",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "uniqueScreenviews",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "timeOnScreen",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "totalTransactionRevenue",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "sessionQualityDim",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                }
+                            ]
+                        },
+                        {
+                            "Name": "trafficSource",
+                            "Type": "RECORD",
+                            "Mode": "NULLABLE",
+                            "Fields": [
+                                {
+                                    "Name": "referralPath",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "campaign",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "source",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "medium",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "keyword",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "adContent",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "adwordsClickInfo",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "campaignId",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adGroupId",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "creativeId",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "criteriaId",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "page",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "slot",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "criteriaParameters",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "gclId",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "customerId",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adNetworkType",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "targetingCriteria",
+                                            "Type": "RECORD",
+                                            "Mode": "NULLABLE",
+                                            "Fields": [
+                                                {
+                                                    "Name": "boomUserlistId",
+                                                    "Type": "INTEGER",
+                                                    "Mode": "NULLABLE"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "Name": "isVideoAd",
+                                            "Type": "BOOLEAN",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "isTrueDirect",
+                                    "Type": "BOOLEAN",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "campaignCode",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                }
+                            ]
+                        },
+                        {
+                            "Name": "device",
+                            "Type": "RECORD",
+                            "Mode": "NULLABLE",
+                            "Fields": [
+                                {
+                                    "Name": "browser",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "browserVersion",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "browserSize",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "operatingSystem",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "operatingSystemVersion",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "isMobile",
+                                    "Type": "BOOLEAN",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "mobileDeviceBranding",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "mobileDeviceModel",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "mobileInputSelector",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "mobileDeviceInfo",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "mobileDeviceMarketingName",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "flashVersion",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "javaEnabled",
+                                    "Type": "BOOLEAN",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "language",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "screenColors",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "screenResolution",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "deviceCategory",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                }
+                            ]
+                        },
+                        {
+                            "Name": "geoNetwork",
+                            "Type": "RECORD",
+                            "Mode": "NULLABLE",
+                            "Fields": [
+                                {
+                                    "Name": "continent",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "subContinent",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "country",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "region",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "metro",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "city",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "cityId",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "networkDomain",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "latitude",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "longitude",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "networkLocation",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                }
+                            ]
+                        },
+                        {
+                            "Name": "customDimensions",
+                            "Type": "RECORD",
+                            "Mode": "REPEATED",
+                            "Fields": [
+                                {
+                                    "Name": "index",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "value",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                }
+                            ]
+                        },
+                        {
+                            "Name": "hits",
+                            "Type": "RECORD",
+                            "Mode": "REPEATED",
+                            "Fields": [
+                                {
+                                    "Name": "hitNumber",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "time",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "hour",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "minute",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "isSecure",
+                                    "Type": "BOOLEAN",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "isInteraction",
+                                    "Type": "BOOLEAN",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "isEntrance",
+                                    "Type": "BOOLEAN",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "isExit",
+                                    "Type": "BOOLEAN",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "referer",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "page",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "pagePath",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "hostname",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "pageTitle",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "searchKeyword",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "searchCategory",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "pagePathLevel1",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "pagePathLevel2",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "pagePathLevel3",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "pagePathLevel4",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "transaction",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "transactionId",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "transactionRevenue",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "transactionTax",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "transactionShipping",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "affiliation",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "currencyCode",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "localTransactionRevenue",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "localTransactionTax",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "localTransactionShipping",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "transactionCoupon",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "item",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "transactionId",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "productName",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "productCategory",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "productSku",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "itemQuantity",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "itemRevenue",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "currencyCode",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "localItemRevenue",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "contentInfo",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "contentDescription",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "appInfo",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "name",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "version",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "id",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "installerId",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "appInstallerId",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "appName",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "appVersion",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "appId",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "screenName",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "landingScreenName",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "exitScreenName",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "screenDepth",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "exceptionInfo",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "description",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "isFatal",
+                                            "Type": "BOOLEAN",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "exceptions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "fatalExceptions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "eventInfo",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "eventCategory",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "eventAction",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "eventLabel",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "eventValue",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "product",
+                                    "Type": "RECORD",
+                                    "Mode": "REPEATED",
+                                    "Fields": [
+                                        {
+                                            "Name": "productSKU",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "v2ProductName",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "v2ProductCategory",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "productVariant",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "productBrand",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "productRevenue",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "localProductRevenue",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "productPrice",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "localProductPrice",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "productQuantity",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "productRefundAmount",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "localProductRefundAmount",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "isImpression",
+                                            "Type": "BOOLEAN",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "isClick",
+                                            "Type": "BOOLEAN",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "customDimensions",
+                                            "Type": "RECORD",
+                                            "Mode": "REPEATED",
+                                            "Fields": [
+                                                {
+                                                    "Name": "index",
+                                                    "Type": "INTEGER",
+                                                    "Mode": "NULLABLE"
+                                                },
+                                                {
+                                                    "Name": "value",
+                                                    "Type": "STRING",
+                                                    "Mode": "NULLABLE"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "Name": "customMetrics",
+                                            "Type": "RECORD",
+                                            "Mode": "REPEATED",
+                                            "Fields": [
+                                                {
+                                                    "Name": "index",
+                                                    "Type": "INTEGER",
+                                                    "Mode": "NULLABLE"
+                                                },
+                                                {
+                                                    "Name": "value",
+                                                    "Type": "INTEGER",
+                                                    "Mode": "NULLABLE"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "Name": "productListName",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "productListPosition",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "productCouponCode",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "promotion",
+                                    "Type": "RECORD",
+                                    "Mode": "REPEATED",
+                                    "Fields": [
+                                        {
+                                            "Name": "promoId",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "promoName",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "promoCreative",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "promoPosition",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "promotionActionInfo",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "promoIsView",
+                                            "Type": "BOOLEAN",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "promoIsClick",
+                                            "Type": "BOOLEAN",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "refund",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "refundAmount",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "localRefundAmount",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "eCommerceAction",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "action_type",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "step",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "option",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "experiment",
+                                    "Type": "RECORD",
+                                    "Mode": "REPEATED",
+                                    "Fields": [
+                                        {
+                                            "Name": "experimentId",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "experimentVariant",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "publisher",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "dfpClicks",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpMatchedQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpMeasurableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpRevenueCpm",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpRevenueCpc",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpViewableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpPagesViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpClicks",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpMatchedQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpMeasurableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpRevenueCpm",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpRevenueCpc",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpViewableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpPagesViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpClicks",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpMatchedQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpMeasurableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpRevenueCpm",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpRevenueCpc",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpViewableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpPagesViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxClicks",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxMatchedQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxMeasurableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxRevenue",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxViewableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxPagesViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsUnitsViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsUnitsMatched",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "viewableAdsViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "measurableAdsViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsPagesViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsClicked",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsRevenue",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpAdGroup",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpAdUnits",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpNetworkId",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "customVariables",
+                                    "Type": "RECORD",
+                                    "Mode": "REPEATED",
+                                    "Fields": [
+                                        {
+                                            "Name": "index",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "customVarName",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "customVarValue",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "customDimensions",
+                                    "Type": "RECORD",
+                                    "Mode": "REPEATED",
+                                    "Fields": [
+                                        {
+                                            "Name": "index",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "value",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "customMetrics",
+                                    "Type": "RECORD",
+                                    "Mode": "REPEATED",
+                                    "Fields": [
+                                        {
+                                            "Name": "index",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "value",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "type",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "social",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "socialInteractionNetwork",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "socialInteractionAction",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "socialInteractions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "socialInteractionTarget",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "socialNetwork",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "uniqueSocialInteractions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "hasSocialSourceReferral",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "socialInteractionNetworkAction",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "latencyTracking",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "pageLoadSample",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "pageLoadTime",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "pageDownloadTime",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "redirectionTime",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "speedMetricsSample",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "domainLookupTime",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "serverConnectionTime",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "serverResponseTime",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "domLatencyMetricsSample",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "domInteractiveTime",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "domContentLoadedTime",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "userTimingValue",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "userTimingSample",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "userTimingVariable",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "userTimingCategory",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "userTimingLabel",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "sourcePropertyInfo",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "sourcePropertyDisplayName",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "sourcePropertyTrackingId",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "contentGroup",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "contentGroup1",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "contentGroup2",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "contentGroup3",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "contentGroup4",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "contentGroup5",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "previousContentGroup1",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "previousContentGroup2",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "previousContentGroup3",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "previousContentGroup4",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "previousContentGroup5",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "contentGroupUniqueViews1",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "contentGroupUniqueViews2",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "contentGroupUniqueViews3",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "contentGroupUniqueViews4",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "contentGroupUniqueViews5",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "dataSource",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "publisher_infos",
+                                    "Type": "RECORD",
+                                    "Mode": "REPEATED",
+                                    "Fields": [
+                                        {
+                                            "Name": "dfpClicks",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpMatchedQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpMeasurableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpRevenueCpm",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpRevenueCpc",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpViewableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpPagesViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpClicks",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpMatchedQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpMeasurableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpRevenueCpm",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpRevenueCpc",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpViewableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpPagesViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpClicks",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpMatchedQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpMeasurableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpRevenueCpm",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpRevenueCpc",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpViewableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpPagesViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxClicks",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxMatchedQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxMeasurableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxRevenue",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxViewableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxPagesViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsUnitsViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsUnitsMatched",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "viewableAdsViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "measurableAdsViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsPagesViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsClicked",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsRevenue",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpAdGroup",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpAdUnits",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpNetworkId",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "Name": "fullVisitorId",
+                            "Type": "STRING",
+                            "Mode": "NULLABLE"
+                        },
+                        {
+                            "Name": "userId",
+                            "Type": "STRING",
+                            "Mode": "NULLABLE"
+                        },
+                        {
+                            "Name": "clientId",
+                            "Type": "STRING",
+                            "Mode": "NULLABLE"
+                        },
+                        {
+                            "Name": "channelGrouping",
+                            "Type": "STRING",
+                            "Mode": "NULLABLE"
+                        },
+                        {
+                            "Name": "socialEngagementType",
+                            "Type": "STRING",
+                            "Mode": "NULLABLE"
+                        }
+                    ]
+                },
+                {
+                    "asset_type": "TABLE",
+                    "table_id": "ga_sessions_20170731",
+                    "full_table_id": "bigquery-public-data:google_analytics_sample.ga_sessions_20170731",
+                    "dataset_id": "google_analytics_sample",
+                    "description": null,
+                    "num_rows": 2620,
+                    "created": "2018-03-31 01:05:17.061000+00:00",
+                    "modified": "2018-10-23 14:58:25.934000+00:00",
+                    "expires": "None",
+                    "path": "/projects/bigquery-public-data/datasets/google_analytics_sample/tables/ga_sessions_20170731",
+                    "columns": [
+                        {
+                            "Name": "visitorId",
+                            "Type": "INTEGER",
+                            "Mode": "NULLABLE"
+                        },
+                        {
+                            "Name": "visitNumber",
+                            "Type": "INTEGER",
+                            "Mode": "NULLABLE"
+                        },
+                        {
+                            "Name": "visitId",
+                            "Type": "INTEGER",
+                            "Mode": "NULLABLE"
+                        },
+                        {
+                            "Name": "visitStartTime",
+                            "Type": "INTEGER",
+                            "Mode": "NULLABLE"
+                        },
+                        {
+                            "Name": "date",
+                            "Type": "STRING",
+                            "Mode": "NULLABLE"
+                        },
+                        {
+                            "Name": "totals",
+                            "Type": "RECORD",
+                            "Mode": "NULLABLE",
+                            "Fields": [
+                                {
+                                    "Name": "visits",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "hits",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "pageviews",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "timeOnSite",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "bounces",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "transactions",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "transactionRevenue",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "newVisits",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "screenviews",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "uniqueScreenviews",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "timeOnScreen",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "totalTransactionRevenue",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "sessionQualityDim",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                }
+                            ]
+                        },
+                        {
+                            "Name": "trafficSource",
+                            "Type": "RECORD",
+                            "Mode": "NULLABLE",
+                            "Fields": [
+                                {
+                                    "Name": "referralPath",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "campaign",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "source",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "medium",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "keyword",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "adContent",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "adwordsClickInfo",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "campaignId",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adGroupId",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "creativeId",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "criteriaId",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "page",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "slot",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "criteriaParameters",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "gclId",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "customerId",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adNetworkType",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "targetingCriteria",
+                                            "Type": "RECORD",
+                                            "Mode": "NULLABLE",
+                                            "Fields": [
+                                                {
+                                                    "Name": "boomUserlistId",
+                                                    "Type": "INTEGER",
+                                                    "Mode": "NULLABLE"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "Name": "isVideoAd",
+                                            "Type": "BOOLEAN",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "isTrueDirect",
+                                    "Type": "BOOLEAN",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "campaignCode",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                }
+                            ]
+                        },
+                        {
+                            "Name": "device",
+                            "Type": "RECORD",
+                            "Mode": "NULLABLE",
+                            "Fields": [
+                                {
+                                    "Name": "browser",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "browserVersion",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "browserSize",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "operatingSystem",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "operatingSystemVersion",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "isMobile",
+                                    "Type": "BOOLEAN",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "mobileDeviceBranding",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "mobileDeviceModel",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "mobileInputSelector",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "mobileDeviceInfo",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "mobileDeviceMarketingName",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "flashVersion",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "javaEnabled",
+                                    "Type": "BOOLEAN",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "language",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "screenColors",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "screenResolution",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "deviceCategory",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                }
+                            ]
+                        },
+                        {
+                            "Name": "geoNetwork",
+                            "Type": "RECORD",
+                            "Mode": "NULLABLE",
+                            "Fields": [
+                                {
+                                    "Name": "continent",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "subContinent",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "country",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "region",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "metro",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "city",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "cityId",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "networkDomain",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "latitude",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "longitude",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "networkLocation",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                }
+                            ]
+                        },
+                        {
+                            "Name": "customDimensions",
+                            "Type": "RECORD",
+                            "Mode": "REPEATED",
+                            "Fields": [
+                                {
+                                    "Name": "index",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "value",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                }
+                            ]
+                        },
+                        {
+                            "Name": "hits",
+                            "Type": "RECORD",
+                            "Mode": "REPEATED",
+                            "Fields": [
+                                {
+                                    "Name": "hitNumber",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "time",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "hour",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "minute",
+                                    "Type": "INTEGER",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "isSecure",
+                                    "Type": "BOOLEAN",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "isInteraction",
+                                    "Type": "BOOLEAN",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "isEntrance",
+                                    "Type": "BOOLEAN",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "isExit",
+                                    "Type": "BOOLEAN",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "referer",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "page",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "pagePath",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "hostname",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "pageTitle",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "searchKeyword",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "searchCategory",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "pagePathLevel1",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "pagePathLevel2",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "pagePathLevel3",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "pagePathLevel4",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "transaction",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "transactionId",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "transactionRevenue",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "transactionTax",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "transactionShipping",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "affiliation",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "currencyCode",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "localTransactionRevenue",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "localTransactionTax",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "localTransactionShipping",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "transactionCoupon",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "item",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "transactionId",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "productName",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "productCategory",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "productSku",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "itemQuantity",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "itemRevenue",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "currencyCode",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "localItemRevenue",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "contentInfo",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "contentDescription",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "appInfo",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "name",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "version",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "id",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "installerId",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "appInstallerId",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "appName",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "appVersion",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "appId",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "screenName",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "landingScreenName",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "exitScreenName",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "screenDepth",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "exceptionInfo",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "description",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "isFatal",
+                                            "Type": "BOOLEAN",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "exceptions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "fatalExceptions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "eventInfo",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "eventCategory",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "eventAction",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "eventLabel",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "eventValue",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "product",
+                                    "Type": "RECORD",
+                                    "Mode": "REPEATED",
+                                    "Fields": [
+                                        {
+                                            "Name": "productSKU",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "v2ProductName",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "v2ProductCategory",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "productVariant",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "productBrand",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "productRevenue",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "localProductRevenue",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "productPrice",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "localProductPrice",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "productQuantity",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "productRefundAmount",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "localProductRefundAmount",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "isImpression",
+                                            "Type": "BOOLEAN",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "isClick",
+                                            "Type": "BOOLEAN",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "customDimensions",
+                                            "Type": "RECORD",
+                                            "Mode": "REPEATED",
+                                            "Fields": [
+                                                {
+                                                    "Name": "index",
+                                                    "Type": "INTEGER",
+                                                    "Mode": "NULLABLE"
+                                                },
+                                                {
+                                                    "Name": "value",
+                                                    "Type": "STRING",
+                                                    "Mode": "NULLABLE"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "Name": "customMetrics",
+                                            "Type": "RECORD",
+                                            "Mode": "REPEATED",
+                                            "Fields": [
+                                                {
+                                                    "Name": "index",
+                                                    "Type": "INTEGER",
+                                                    "Mode": "NULLABLE"
+                                                },
+                                                {
+                                                    "Name": "value",
+                                                    "Type": "INTEGER",
+                                                    "Mode": "NULLABLE"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "Name": "productListName",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "productListPosition",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "productCouponCode",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "promotion",
+                                    "Type": "RECORD",
+                                    "Mode": "REPEATED",
+                                    "Fields": [
+                                        {
+                                            "Name": "promoId",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "promoName",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "promoCreative",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "promoPosition",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "promotionActionInfo",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "promoIsView",
+                                            "Type": "BOOLEAN",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "promoIsClick",
+                                            "Type": "BOOLEAN",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "refund",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "refundAmount",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "localRefundAmount",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "eCommerceAction",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "action_type",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "step",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "option",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "experiment",
+                                    "Type": "RECORD",
+                                    "Mode": "REPEATED",
+                                    "Fields": [
+                                        {
+                                            "Name": "experimentId",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "experimentVariant",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "publisher",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "dfpClicks",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpMatchedQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpMeasurableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpRevenueCpm",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpRevenueCpc",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpViewableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpPagesViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpClicks",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpMatchedQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpMeasurableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpRevenueCpm",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpRevenueCpc",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpViewableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpPagesViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpClicks",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpMatchedQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpMeasurableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpRevenueCpm",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpRevenueCpc",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpViewableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpPagesViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxClicks",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxMatchedQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxMeasurableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxRevenue",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxViewableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxPagesViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsUnitsViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsUnitsMatched",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "viewableAdsViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "measurableAdsViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsPagesViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsClicked",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsRevenue",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpAdGroup",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpAdUnits",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpNetworkId",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "customVariables",
+                                    "Type": "RECORD",
+                                    "Mode": "REPEATED",
+                                    "Fields": [
+                                        {
+                                            "Name": "index",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "customVarName",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "customVarValue",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "customDimensions",
+                                    "Type": "RECORD",
+                                    "Mode": "REPEATED",
+                                    "Fields": [
+                                        {
+                                            "Name": "index",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "value",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "customMetrics",
+                                    "Type": "RECORD",
+                                    "Mode": "REPEATED",
+                                    "Fields": [
+                                        {
+                                            "Name": "index",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "value",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "type",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "social",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "socialInteractionNetwork",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "socialInteractionAction",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "socialInteractions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "socialInteractionTarget",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "socialNetwork",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "uniqueSocialInteractions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "hasSocialSourceReferral",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "socialInteractionNetworkAction",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "latencyTracking",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "pageLoadSample",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "pageLoadTime",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "pageDownloadTime",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "redirectionTime",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "speedMetricsSample",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "domainLookupTime",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "serverConnectionTime",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "serverResponseTime",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "domLatencyMetricsSample",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "domInteractiveTime",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "domContentLoadedTime",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "userTimingValue",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "userTimingSample",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "userTimingVariable",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "userTimingCategory",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "userTimingLabel",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "sourcePropertyInfo",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "sourcePropertyDisplayName",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "sourcePropertyTrackingId",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "contentGroup",
+                                    "Type": "RECORD",
+                                    "Mode": "NULLABLE",
+                                    "Fields": [
+                                        {
+                                            "Name": "contentGroup1",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "contentGroup2",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "contentGroup3",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "contentGroup4",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "contentGroup5",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "previousContentGroup1",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "previousContentGroup2",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "previousContentGroup3",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "previousContentGroup4",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "previousContentGroup5",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "contentGroupUniqueViews1",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "contentGroupUniqueViews2",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "contentGroupUniqueViews3",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "contentGroupUniqueViews4",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "contentGroupUniqueViews5",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "dataSource",
+                                    "Type": "STRING",
+                                    "Mode": "NULLABLE"
+                                },
+                                {
+                                    "Name": "publisher_infos",
+                                    "Type": "RECORD",
+                                    "Mode": "REPEATED",
+                                    "Fields": [
+                                        {
+                                            "Name": "dfpClicks",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpMatchedQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpMeasurableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpRevenueCpm",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpRevenueCpc",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpViewableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpPagesViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpClicks",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpMatchedQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpMeasurableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpRevenueCpm",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpRevenueCpc",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpViewableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsenseBackfillDfpPagesViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpClicks",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpMatchedQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpMeasurableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpRevenueCpm",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpRevenueCpc",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpViewableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxBackfillDfpPagesViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxClicks",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxMatchedQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxMeasurableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxQueries",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxRevenue",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxViewableImpressions",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adxPagesViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsUnitsViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsUnitsMatched",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "viewableAdsViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "measurableAdsViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsPagesViewed",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsClicked",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "adsRevenue",
+                                            "Type": "INTEGER",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpAdGroup",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpAdUnits",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        },
+                                        {
+                                            "Name": "dfpNetworkId",
+                                            "Type": "STRING",
+                                            "Mode": "NULLABLE"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "Name": "fullVisitorId",
+                            "Type": "STRING",
+                            "Mode": "NULLABLE"
+                        },
+                        {
+                            "Name": "userId",
+                            "Type": "STRING",
+                            "Mode": "NULLABLE"
+                        },
+                        {
+                            "Name": "clientId",
+                            "Type": "STRING",
+                            "Mode": "NULLABLE"
+                        },
+                        {
+                            "Name": "channelGrouping",
+                            "Type": "STRING",
+                            "Mode": "NULLABLE"
+                        },
+                        {
+                            "Name": "socialEngagementType",
+                            "Type": "STRING",
+                            "Mode": "NULLABLE"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
