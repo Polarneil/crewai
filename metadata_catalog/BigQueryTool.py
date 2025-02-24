@@ -26,6 +26,9 @@ def update_version(current_version):
 def get_table_metadata(dataset_table_data_path: str):
     """ Useful for retrieving BigQuery metadata from Google Cloud """
 
+    datasets_added = 0
+    datasets_updated = 0
+    datasets_skipped = 0
     tables_added = 0
     tables_updated = 0
     tables_skipped = 0
@@ -51,8 +54,40 @@ def get_table_metadata(dataset_table_data_path: str):
     with open(dataset_table_data_path, 'r') as dataset_table_file:
         dataset_table_data = json.load(dataset_table_file)
 
-    # Process all tables
+    # Process all datasets and tables
     for dataset, tables in dataset_table_data.items():
+        dataset_ref = f"{gcp_proj}.{dataset}"
+        dataset_obj = client.get_dataset(dataset_ref)
+
+        dataset_metadata = {
+            "dataset_id": dataset_obj.dataset_id,
+            "description": dataset_obj.description,
+            "data_location": dataset_obj.location,
+            "created": str(dataset_obj.created),
+            "modified": str(dataset_obj.modified),
+            "path": dataset_obj.path,
+            "data_assets": [],
+        }
+
+        found_dataset = False
+        dataset_index = -1
+        for i, asset in enumerate(catalog_data["data_assets"]):
+            if asset["dataset_id"] == dataset_metadata["dataset_id"]:
+                found_dataset = True
+                dataset_index = i
+                if asset["modified"] != dataset_metadata["modified"]:
+                    catalog_data["data_assets"][i] = dataset_metadata
+                    datasets_updated += 1
+                else:
+                    datasets_skipped += 1
+                break
+
+        if not found_dataset:
+            catalog_data["data_assets"].append(dataset_metadata)
+            datasets_added += 1
+        else:
+            dataset_metadata = catalog_data["data_assets"][dataset_index]
+
         for table in tables:
             if table == "ga_sessions_20170801" or table == "ga_sessions_20170731":  # FILTERED DOWN TABLES FOR TESTING
                 table_ref = f"{gcp_proj}.{dataset}.{table}"
@@ -96,21 +131,24 @@ def get_table_metadata(dataset_table_data_path: str):
                 table_metadata["columns"] = field_metadata
 
                 found = False
-                for i, asset in enumerate(catalog_data["data_assets"]):
+                for i, asset in enumerate(dataset_metadata["data_assets"]):
                     if asset["full_table_id"] == table_metadata["full_table_id"]:
                         found = True
                         if asset["modified"] != table_metadata["modified"]:
-                            catalog_data["data_assets"][i] = table_metadata
+                            dataset_metadata["data_assets"][i] = table_metadata
                             tables_updated += 1
                         else:
                             tables_skipped += 1
                         break
 
                 if not found:
-                    catalog_data["data_assets"].append(table_metadata)
+                    dataset_metadata["data_assets"].append(table_metadata)
                     tables_added += 1
 
     catalog_data["change_summary"] = {
+        "datasets_added": datasets_added,
+        "datasets_updated": datasets_updated,
+        "datasets_skipped": datasets_skipped,
         "tables_added": tables_added,
         "tables_updated": tables_updated,
         "tables_skipped": tables_skipped
@@ -127,6 +165,9 @@ def get_table_metadata(dataset_table_data_path: str):
         f"""
         Summary:
         Catalog version: {catalog_data["version"]}
+        Datasets added: {datasets_added}
+        Datasets updated: {datasets_updated}
+        Datasets skipped: {datasets_skipped}
         Tables added: {tables_added}
         Tables updated: {tables_updated}
         Tables skipped: {tables_skipped}

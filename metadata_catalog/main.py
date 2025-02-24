@@ -1,4 +1,5 @@
 import os
+from langtrace_python_sdk import langtrace
 from crewai import Crew
 from agents import GCPAgents
 from tasks import GCPTasks
@@ -6,6 +7,9 @@ from dotenv import load_dotenv
 from crewai.knowledge.source.string_knowledge_source import StringKnowledgeSource
 
 load_dotenv()
+
+# Uncomment line below to enable langtrace metrics
+# langtrace.init(api_key=os.getenv("LANGTRACE_API_KEY"))
 
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 project_id = os.getenv("GCP_PROJECT_DEMO")
