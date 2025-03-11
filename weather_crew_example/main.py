@@ -1,12 +1,8 @@
-import os
 from crewai import Crew
 
 from textwrap import dedent
 from agents import WeatherAgents
 from tasks import WeatherTasks
-
-
-os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 
 
 class CustomCrew:

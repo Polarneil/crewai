@@ -55,10 +55,12 @@ fastapi==0.115.8
 fastavro==1.10.0
 fastjsonschema==2.21.1
 filelock==3.17.0
+filetype==1.2.0
 flatbuffers==25.2.10
 fqdn==1.5.1
 frozenlist==1.5.0
 fsspec==2025.2.0
+google-ai-generativelanguage==0.6.16
 google-api-core==2.24.1
 google-auth==2.38.0
 google-cloud-aiplatform==1.79.0
@@ -120,8 +122,9 @@ lancedb==0.19.0
 langchain==0.3.18
 langchain-cohere==0.3.5
 langchain-community==0.3.17
-langchain-core==0.3.34
+langchain-core==0.3.43
 langchain-experimental==0.3.4
+langchain-google-genai==2.0.11
 langchain-ollama==0.2.3
 langchain-openai==0.2.14
 langchain-text-splitters==0.3.6
