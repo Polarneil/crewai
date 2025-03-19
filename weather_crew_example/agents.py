@@ -28,6 +28,11 @@ class WeatherAgents:
             model="ollama/llama3.1:8b",
             base_url="http://localhost:11434",
         )
+        self.CrederaProxy = LLM(
+            model="gpt-4o",
+            base_url="http://0.0.0.0:4000",
+            api_key="sk-mnu6FpF-NrGmNY2E8L8OcQ"
+        )
 
     def weather_agent(self):
         return Agent(
@@ -40,7 +45,7 @@ class WeatherAgents:
             tools=[retrieve_weather_data],
             allow_delegation=False,
             verbose=True,
-            llm=self.Gemini2Flash,
+            llm=self.CrederaProxy,
         )
 
     def writer_agent(self):
@@ -50,5 +55,5 @@ class WeatherAgents:
             goal=dedent(f"""Take the information from the weather agent and present a report to the general public."""),
             allow_delegation=False,
             verbose=True,
-            llm=self.Gemini2Flash,
+            llm=self.CrederaProxy,
         )
